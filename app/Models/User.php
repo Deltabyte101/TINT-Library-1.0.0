@@ -12,15 +12,31 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    const ADMIN_TYPE = 1 ;
+    const DEFAULT_TYPE = 0 ;
+    protected $table = 'userData' ;
+
+    public function isAdmin()
+    {
+        return $this->User_Admin_Type === self::ADMIN_TYPE ;
+    }
+
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'User_CID',
+        'User_Title',
+        'USer_Fname',
+        'USer_Lname',
+        'User_Password',
+        'USer_Status_ID',
+        'Dep_User_ID',
+        'User_Email',
+        'User_Admin_Type',
     ];
 
     /**
@@ -41,4 +57,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
 }

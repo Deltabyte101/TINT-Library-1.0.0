@@ -20,10 +20,10 @@ class Users extends Migration
             $table->string('User_Fname',20)->nullable();
             $table->string('User_Lname',20)->nullable();
             $table->string('User_Password',20)->nullable();
-            $table->int('User_Status_ID')->nullable();
-            $table->int('Dep_User_ID')->nullable();
+            $table->integer('User_Status_ID')->nullable();
+            $table->integer('Dep_User_ID')->nullable();
             $table->string('User_Email',50)->nullable();
-            $table->string('User_Type',5)->nullable();
+            $table->boolean('User_Admin_Type')->default(0);
 
             //$table->timestamps();
         });

@@ -17,7 +17,7 @@ class Department extends Migration
             $table->id();
             $table->string('Dep_Code',20)->nullable();
             $table->string('Dep_Name',30)->nullable();
-            $table->int('Dep_Manager')->nullable();
+            $table->integer('Dep_Manager')->nullable();
         });
     }
 

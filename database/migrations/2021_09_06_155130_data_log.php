@@ -15,9 +15,9 @@ class DataLog extends Migration
     {
         Schema::create('DataLogs', function (Blueprint $table) {
             $table->id();
-            $table->int('Borrow_User_ID')->nullable();
-            $table->int('Book_ID')->nullable();
-            $table->int('Admin_User_ID')->nullable();
+            $table->integer('Borrow_User_ID')->nullable();
+            $table->integer('Book_ID')->nullable();
+            $table->integer('Admin_User_ID')->nullable();
             $table->date('Borrow_date')->nullable();
             $table->date('Due_date')->nullable();
             $table->timestamps();

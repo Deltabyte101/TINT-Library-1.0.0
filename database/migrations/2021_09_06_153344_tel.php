@@ -16,7 +16,7 @@ class Tel extends Migration
         Schema::create('Tels', function (Blueprint $table) {
             $table->id();
             $table->string('Tel_Number',10)->nullable();
-            $table->int('Tel_User_ID')->nullable();
+            $table->integer('Tel_User_ID')->nullable();
         });
     }
 
